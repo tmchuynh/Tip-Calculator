@@ -24,8 +24,8 @@
             <div class="container-fluid d-flex">
                 <div class="input-group">
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Bill</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="150">
+                        <label for="billTotal" class="form-label">Bill</label>
+                        <input type="text" class="form-control" oninput="getInputValue(this)" id="billTotal" placeholder="150">
                     </div>
 
                     <h6>Select Tip %</h6>
@@ -33,12 +33,12 @@
                         <button type="button" class="btn btn-primary">Left</button>
                         <button type="button" class="btn btn-primary">Middle</button>
                         <button type="button" class="btn btn-primary">Right</button>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="150">
+                        <input type="text" class="form-control" oninput="getInputValue(this)" id="customTip" placeholder="150">
                     </div>
 
                     <div class="mb-3">
-                        <label for="formGroupExampleInput" class="form-label">Number of People</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="0">
+                        <label for="numOfPeople" class="form-label">Number of People</label>
+                        <input type="text" class="form-control" oninput="getInputValue(this)" id="numOfPeople" placeholder="0">
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <button type="submit" class="btn btn-primary">Reset</button>
+                        <button type="submit" onclick="reset()" class="btn btn-primary">Reset</button>
                     </div>
                 </div>
             </div>
