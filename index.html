@@ -25,20 +25,22 @@
                 <div class="input-group">
                     <div class="mb-3">
                         <label for="billTotal" class="form-label">Bill</label>
-                        <input type="text" class="form-control" oninput="getInputValue(this)" id="billTotal" placeholder="150">
+                        <input type="text" class="form-control error" oninput="getInputValue(this)" id="billTotal" placeholder="150">
                     </div>
 
                     <h6>Select Tip %</h6>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-primary">Left</button>
-                        <button type="button" class="btn btn-primary">Middle</button>
-                        <button type="button" class="btn btn-primary">Right</button>
-                        <input type="text" class="form-control" oninput="getInputValue(this)" id="customTip" placeholder="150">
+                        <button type="button" onclick="getTipButton(this)" class="btn btn-primary">5%</button>
+                        <button type="button" class="btn btn-primary">10%</button>
+                        <button type="button" class="btn btn-primary">15%</button>
+                        <button type="button" class="btn btn-primary">25%</button>
+                        <button type="button" class="btn btn-primary">50%</button>
+                        <input type="text" class="form-control" oninput="getInputValue(this)" id="customTip" placeholder="12%">
                     </div>
 
                     <div class="mb-3">
                         <label for="numOfPeople" class="form-label">Number of People</label>
-                        <input type="text" class="form-control" oninput="getInputValue(this)" id="numOfPeople" placeholder="0">
+                        <input type="text" class="form-control error" oninput="getInputValue(this)" id="numOfPeople" placeholder="0">
                     </div>
                 </div>
 
@@ -53,7 +55,7 @@
                                 </code>
                         </div>
                         <div class="col">
-                            <h1>$0.00</h1>
+                            <h1 class="tip_amount">$0.00</h1>
                         </div>
                     </div>
                     <div class="row">
@@ -80,7 +82,7 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <script src="public/js/tips.js" async defer></script>
+    <script src="public/js/tips.js"></script>
 </body>
 
 </html>
