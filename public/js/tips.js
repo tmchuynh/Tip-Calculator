@@ -2,6 +2,7 @@ var billTotal = document.getElementById("billTotal");
 var customTip = document.getElementById("customTip");
 var numOfPeople = document.getElementById("numOfPeople");
 var tip_amount = document.querySelector(".tip_amount");
+var total_amount = document.querySelector(".total_amount");
 
 var bill = billTotal.value;
 var tip = customTip.value;
@@ -23,7 +24,7 @@ function getInputValue(el) {
         return;
     }
     else {
-        calculateTip();
+        calculate();
     }
 }
 
@@ -31,6 +32,10 @@ function reset() {
     billTotal.value = "";
     customTip.value = "";
     numOfPeople.value = "";
+}
+
+function submit() {
+    calculate();
 }
 
 $(document).ready(function (e) {
@@ -51,7 +56,7 @@ $(document).ready(function () {
     });
 });
 
-function calculateTip() {
+function calculate() {
     var bill = billTotal.value;
     var tip;
     if (customTip.value == "") {
@@ -62,8 +67,10 @@ function calculateTip() {
         tip = customTip.value;
     }
     var people = numOfPeople.value;
-    var total = (bill * tip / 100) / people;
-    tip_amount.textContent = "$" + total;
+    var totalTip = (bill * tip / 100) / people;
+    var total = (bill / people) + totalTip;
+    total_amount.textContent = "$" + total.toFixed(2);
+    tip_amount.textContent = "$" + totalTip.toFixed(2);
     console.log(tip_amount.textContent);
     console.log(total);
 }

@@ -31,10 +31,10 @@
                     <h6>Select Tip %</h6>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button type="button" onclick="getTipButton(this)" class="btn btn-primary">5%</button>
-                        <button type="button" class="btn btn-primary">10%</button>
-                        <button type="button" class="btn btn-primary">15%</button>
-                        <button type="button" class="btn btn-primary">25%</button>
-                        <button type="button" class="btn btn-primary">50%</button>
+                        <button type="button" onclick="getTipButton(this)" class="btn btn-primary">10%</button>
+                        <button type="button" onclick="getTipButton(this)" class="btn btn-primary">15%</button>
+                        <button type="button" onclick="getTipButton(this)" class="btn btn-primary">25%</button>
+                        <button type="button" onclick="getTipButton(this)" class="btn btn-primary">50%</button>
                         <input type="text" class="form-control" oninput="getInputValue(this)" id="customTip" placeholder="12%">
                     </div>
 
@@ -66,9 +66,12 @@
                                 </code>
                         </div>
                         <div class="col">
-                            <h1>$0.00</h1>
+                            <h1 class="total_amount">$0.00</h1>
                         </div>
                     </div>
+                    <div class="row">
+                        <button type="submit" onclick="submit()" class="btn btn-primary">Submit</button>
+                        </div>
                     <div class="row">
                         <button type="submit" onclick="reset()" class="btn btn-primary">Reset</button>
                     </div>
